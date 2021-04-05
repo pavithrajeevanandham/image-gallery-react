@@ -1,12 +1,14 @@
+import Single from './Single';
+
 const ImageGrid = ({images}) =>{
     return(
         <div className="image-grid">
-            {
-                images.forEach(item => {
-                    <Single img={item} />
-                })
-            }
-        </div>
+                {
+                    images.map(item => (
+                        <Single key={item.id} img={item} />
+                    ))
+                }
+        </div>    
     )
 }
 
